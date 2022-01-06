@@ -1,31 +1,14 @@
-import ListGifs from "./components/list-gifs";
+import ListGifs from "./components/List Gifs/list-gifs";
 import "./App.css";
 
-import { Link, Route } from "wouter"
+import { Route } from "wouter"
+import Header from "./components/Header/header";
 
 function App() {
 
   return (
     <div className="App">
-      <header>
-        <Link to="/">Giffi</Link>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/gifs/sports">Sports</Link>
-            </li>
-            <li>
-              <Link to="/gifs/literature">Literature</Link>
-            </li>
-            <li>
-              <Link to="/gifs/actors">Actors</Link>
-            </li>
-            <li>
-              <Link to="/gifs/christmas">Christmas</Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
+      <Header/>
       <section className="App-content">
         <h1>GIFS</h1>
         <Route 

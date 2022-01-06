@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react"
-import searchGifs from "../api/api.search.gifs"
-import Gif from "./gif"
+import searchGifs from "../../api/api.search.gifs"
+import Gif from "../Gif/gif"
 
 function ListGifs ({ params }) {
   const { keyword } = params
+  const [loading, setLoading] = useState(false)
   /*
    * useState - Manejo de estados para los gifs
    * [gifs] : Valor actual del estado
@@ -15,9 +16,15 @@ function ListGifs ({ params }) {
    * [keyword] : Dependencias para la ejecución
    */
   useEffect(function () {
+    setLoading(true)
     searchGifs({ keyword })
-      .then(gifs => setGifs(gifs))
+      .then(gifs => {
+        setGifs(gifs)
+        setLoading(false)
+      })
   }, [keyword])
+
+  if (loading) return <div><span>Cargando...</span></div>
   
   return (
     <div className="gifs-container"> 
