@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
-import searchGifs from "../../api/api.search.gifs"
-import Gif from "../Gif/gif"
+import searchGifs from "../../services/search.gifs"
+import Gif from "../Gif/"
 
 function ListGifs ({ params }) {
   const { keyword } = params
