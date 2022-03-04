@@ -1,8 +1,8 @@
-import ListGifs from "./components/List Gifs/list-gifs";
+import ListGifs from "./components/ListGifs";
 import "./App.css";
 
 import { Route } from "wouter"
-import Header from "./components/Header/header";
+import Header from "./containers/Header";
 
 function App() {
 
