@@ -1,5 +1,5 @@
 import { Link } from "wouter"
-import "./header.css"
+import "./styles.css"
 import logo from "../../logo.svg"
 
 function Header() {
